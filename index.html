@@ -116,10 +116,10 @@
             I'm a final year master's student in computer science specializing
             in Applied AI at the University of Ottawa, with a strong background
             in machine learning, and data analysis. My current research focuses
-            on crop yield prediction and price forecasting using UAV imagery
-            and historical data. I have over four years of experience as a
-            teaching assistant and team leader, combining technical expertise
-            with strong communication and leadership skills.
+            on crop yield prediction and price forecasting using UAV imagery and
+            historical data. I have over four years of experience as a teaching
+            assistant and team leader, combining technical expertise with strong
+            communication and leadership skills.
           </p>
         </div>
         <!-- End Section Title -->
@@ -631,153 +631,130 @@
 
       <!-- Projects Section -->
       <section id="projects" class="projects section py-5">
-        <div
-          class="container section-title  mb-5"
-          data-aos="fade-up"
-        >
+        <div class="container section-title mb-5" data-aos="fade-up">
           <h2 class="fw-bold">Projects</h2>
-          <p class="text-muted">
-            Some of the key projects I've worked on, spanning research, applied
-            machine learning, and app development.
+          <p class="lead text-muted">
+            Highlighted works in AI, machine learning, and app development.
           </p>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <!-- Project 1 -->
-          <div class="card mb-5 shadow-sm border-0">
-            <div class="row g-0">
-              <div class="col-lg-3">
-                <img
-                  src="assets/img/yield-data.jpg"
-                  class="img-fluid rounded shadow-sm"
-                  alt="Yield Data Project"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">📈 Yield-Data-Processing</h5>
-                  <p>
-                    Cleaning raw yield monitor spatial data to produce accurate yield
-                    maps for precision agriculture modeling.
-                  </p>
-
-
-                  <h6 class="text-primary">🛠️ Processing Steps</h6>
-                  <ul>
-                    <li>Harvest lag time removal</li>
-                    <li>Outlier detection & filtering</li>
-                    <li>Speed-based filtering</li>
-                    <li>Overlap/double-count cleaning</li>
-                  </ul>
-
-                  <!-- GitHub Link -->
-                  <a
-                    href="https://github.com/Wsank045/Yield-Data-Processing"
-                    target="_blank"
-                    class="btn btn-primary mt-3"
-                    >View on GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold text-primary">📈 Yield-Data-Processing</h4>
+            <p>
+              This project forms a foundational part of my thesis, focusing on
+              the cleaning and preprocessing of raw yield monitor data collected
+              from four farms across Canada. Unlike standard data cleaning
+              tasks, yield data requires specialized treatment due to its
+              spatial nature and unique noise characteristics. The workflow
+              involved identifying and removing outliers, correcting for
+              harvester lag, filtering based on speed thresholds, and handling
+              overlap zones. Our approach was heavily inspired by two key
+              studies:
+            </p>
+            <ul>
+              <li>
+                Lyle et al.(2013), which outlines robust post-processing
+                techniques for eliminating erroneous yield measurements in grain
+                crops.
+              </li>
+              <li>
+                Blackmore (1999), which presents remedial correction methods for
+                improving the reliability of yield maps.
+              </li>
+            </ul>
+            <p>
+              These references provided a methodological basis for building a
+              tailored pipeline suitable for spatially irregular and highly
+              variable yield data.
+            </p>
+            <h6 class="text-success">🛠️ Tools Used</h6>
+            <ul class="list-unstyled">
+              <li>✔️ Python, GeoPandas, QGIS, Shapely</li>
+            </ul>
+            <a
+              href="https://github.com/Wsank045/Yield-Data-Processing"
+              target="_blank"
+              class="btn btn-outline-primary mt-2"
+              >GitHub Repo</a
+            >
           </div>
 
           <!-- Project 2 -->
-          <div class="card mb-5 shadow-sm border-0">
-            <div class="row g-0">
-              <div class="col-lg-3">
-                <img
-                  src="assets/img/llm-project.jpg"
-                  class="img-fluid rounded shadow-sm"
-                  alt="LLM Reasoning Project"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">
-                    🧠 Faithful Reasoning via DeepSeek
-                  </h5>
-                  <p>
-                    Enhancing reasoning in small LLMs using Chain-of-Thought
-                    distillation and reinforcement learning.
-                  </p>
-
-                  <h6 class="text-primary">📦 Key Components</h6>
-                  <ul>
-                    <li>DeepSeek-R1 for CoT generation</li>
-                    <li>LoRA-tuned LLaMA-3B</li>
-                    <li>Faithfulness-based RL fine-tuning</li>
-                  </ul>
-
-                  <h6 class="text-primary">📊 Evaluation</h6>
-                  <p>
-                    Accuracy and faithfulness tested on GSM8K dataset with
-                    notable gains.
-                  </p>
-
-                  <h6 class="text-primary">🚀 Contributions</h6>
-                  <ul>
-                    <li>Synthetic CoT Dataset</li>
-                    <li>LoRA + RL Training Pipeline</li>
-                    <li>Faithfulness Metrics</li>
-                  </ul>
-
-                  <!-- GitHub Link -->
-                  <a
-                    href="https://github.com/Wsank045/knowledge-distillation-GRPO"
-                    target="_blank"
-                    class="btn btn-primary mt-3"
-                    >View on GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="card mb-5 shadow-sm border-0">
-            <div class="row g-0">
-              <div class="col-lg-3">
-                <img
-                  src="assets/img/mjiapp.jpg"
-                  class="img-fluid rounded shadow-sm"
-                  alt="MJIApp Mobile App"
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title fw-bold">📲 MJIApp</h5>
-                  <p>
-                    A React Native mobile app for non-profit member management
-                    and newcomer onboarding.
-                  </p>
-
-                  <h6 class="text-primary">✨ Features</h6>
-                  <ul>
-                    <li>Member onboarding with agents</li>
-                    <li>Daily reporting system</li>
-                    <li>Admin controls for agent roles</li>
-                    <li>Youth engagement focus</li>
-                  </ul>
-
-                  <!-- GitHub Link -->
-                  <a
-                    href="https://github.com/Wsank045/MJIApp"
-                    target="_blank"
-                    class="btn btn-primary mt-3"
-                    >View on GitHub</a
-                  >
-                </div>
-              </div>
-            </div>
+          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold text-primary">
+              🧠 Faithful Reasoning via DeepSeek
+            </h4>
+            <p>
+              This project investigates how to improve the faithfulness and
+              logical consistency of reasoning in small language models through
+              Chain-of-Thought (CoT) fine-tuning and synthetic data
+              distillation. We propose a novel framework that transfers
+              high-quality reasoning capabilities from the larger DeepSeek-R1
+              model to a compact LLaMA-3B-Instruct model using LoRA-based
+              fine-tuning and reinforcement learning (GRPO/Unsloth). By
+              combining distillation and reward-based optimization, our method
+              enhances the ability of smaller models to reason step-by-step
+              while preserving factual accuracy.
+            </p>
+            <h6 class="text-success">🛠️ Tools Used</h6>
+            <ul class="list-unstyled">
+              <li>✔️ DeepSeek-R1, LoRA-tuned LLaMA-3B, Unsloth</li>
+              <li>✔️ Reinforcement learning, custom faithfulness metrics, NLP, LLMs</li>
+            </ul>
+            <a
+              href="https://github.com/Wsank045/knowledge-distillation-GRPO"
+              target="_blank"
+              class="btn btn-outline-primary mt-2"
+              >GitHub Repo</a
+            >
           </div>
         </div>
       </section>
-      <!-- End of Projects Section -->
+      <!-- Thesis Section -->
+      <section id="thesis" class="section py-5 bg-light">
+        <div class="container section-title mb-5" data-aos="fade-up">
+          <h2 class="fw-bold">Master's Thesis</h2>
+          <p class="lead text-muted">
+            Crop Yield prediction using UAV imagery
+          </p>
+        </div>
 
-      
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="card shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold mb-3 text-primary">
+              📚 Yield Prediction and Price Forecasting Using UAV Imagery
+            </h4>
+            <p>
+              My thesis focuses on developing machine learning models for corn
+              yield prediction using UAV drone imagery and forecasting market
+              prices using historical data. The goal is to help farmers estimate
+              yields and set informed presale prices. We aim to design a generalizable model
+              for diverse farms from different region of Canada
+            </p>
+
+            <h6 class="text-success">🔍 Key Contributions</h6>
+            <ul class="list-unstyled">
+              <li>✔️ Vegetation index extraction and imagery preprocessing</li>
+              <li>
+                ✔️ Yield prediction using regression and convolutional neural
+                networks (CNNs)
+              </li>
+              <li>
+                ✔️ Spatial data analysis
+              </li>
+              <li>
+                ✔️ Market price forecasting based on time series and machine
+                learning models
+              </li>
+              <li>✔️ Evaluation using RMSE, R², and correlation</li>
+              <li>✔️ Applied across farms in Ontario, Manitoba, and Alberta</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- Scroll Top -->
     <a
