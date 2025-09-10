@@ -88,6 +88,11 @@
             <a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a>
           </li>
           <li>
+            <a href="#projects"
+              ><i class="bi bi-folder2-open navicon me-2"></i> Projects</a
+            >
+          </li>
+          <li>
             <a href="#education"
               ><i class="bi bi-mortarboard-fill navicon me-2"></i> Education</a
             >
@@ -95,11 +100,6 @@
           <li>
             <a href="#experience"
               ><i class="bi bi-briefcase-fill navicon me-2"></i> Experience</a
-            >
-          </li>
-          <li>
-            <a href="#projects"
-              ><i class="bi bi-folder2-open navicon me-2"></i> Projects</a
             >
           </li>
         </ul>
@@ -401,6 +401,161 @@
       </section>
       <!-- End Skills Section -->
 
+      <!-- Projects Section -->
+      <section id="projects" class="projects section py-5">
+        <div class="container section-title mb-5" data-aos="fade-up">
+          <h2 class="fw-bold">Projects</h2>
+          <p class="lead text-muted">
+            An overview of some projects i worked on
+          </p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <!-- Project 1 -->
+          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold text-primary"> Yield Data Processing</h4>
+            <p>
+              This project forms a foundational part of my thesis, focusing on
+              the cleaning and preprocessing of raw yield monitor data collected
+              from four farms across Canada. Unlike standard data cleaning
+              tasks, yield data requires specialized treatment due to its
+              spatial nature and unique noise characteristics. The workflow
+              involved identifying and removing outliers, correcting for
+              harvester lag, filtering based on speed thresholds, and handling
+              overlap zones. Our approach was heavily inspired by two key
+              studies:
+            </p>
+            <ul>
+              <li>
+                Lyle et al.(2013), which outlines robust post-processing
+                techniques for eliminating erroneous yield measurements in grain
+                crops.
+              </li>
+              <li>
+                Blackmore (1999), which presents remedial correction methods for
+                improving the reliability of yield maps.
+              </li>
+            </ul>
+            <p>
+              These references provided a methodological basis for building a
+              tailored pipeline suitable for spatially irregular and highly
+              variable yield data.
+            </p>
+            <h6 class="text-success">Tools Used</h6>
+            <ul class="list-unstyled">
+              <li>Python, GeoPandas, QGIS, Shapely</li>
+            </ul>
+            <a
+              href="https://github.com/Wsank045/Yield-Data-Processing"
+              target="_blank"
+              class="btn btn-outline-primary mt-2"
+              >GitHub Repo</a
+            >
+          </div>
+
+          <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+
+          <!-- Project 2 -->
+          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold text-primary"> CNN on Yield Prediction from UAV Imagery</h4>
+            <p>
+              This projects develops a Convolutional Neural Network (CNN) to predict crop yield from 7 band 
+              multispectral UAV orthomosaic tiles. On this experiements the model was evaluated on the ability to generalize under
+              different training strategies :
+            </p>
+            <ul>
+              <li>
+                Baseline : Train / Test on the same field.
+              </li>
+              <li>
+                Mixed : Combined training with samples from multiple fields.
+              </li>
+              <li>
+                LOFO : Train on all except one field, test field was held-out.
+              </li>
+              <li>
+                Cluster & Reverse Cluster : Train / Test split based on spatial clusters within fields to test intra-field generalization.
+              </li>
+            </ul>
+
+            <h6 class="text-success">Tools Used</h6>
+            <ul class="list-unstyled">
+              <li>Python, PyTorch, Scikit-learn</li>
+            </ul>
+            <a
+              href="https://github.com/Wsank045/CNN-crop-yield-prediction"
+              target="_blank"
+              class="btn btn-outline-primary mt-2"
+              >GitHub Repo</a
+            >
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold text-primary">
+              Faithful Reasoning via DeepSeek
+            </h4>
+            <p>
+              This project investigates how to improve the faithfulness and
+              logical consistency of reasoning in small language models through
+              Chain-of-Thought (CoT) fine-tuning and synthetic data
+              distillation. We propose a novel framework that transfers
+              high-quality reasoning capabilities from the larger DeepSeek-R1
+              model to a compact LLaMA-3B-Instruct model using LoRA-based
+              fine-tuning and reinforcement learning (GRPO/Unsloth). By
+              combining distillation and reward-based optimization, our method
+              enhances the ability of smaller models to reason step-by-step
+              while preserving factual accuracy.
+            </p>
+            <h6 class="text-success">Tools Used</h6>
+            <ul class="list-unstyled">
+              <li> DeepSeek-R1, LoRA-tuned LLaMA-3B, Unsloth</li>
+              <li> Reinforcement learning, custom faithfulness metrics, NLP, LLMs</li>
+            </ul>
+            <a
+              href="https://github.com/Wsank045/knowledge-distillation-GRPO"
+              target="_blank"
+              class="btn btn-outline-primary mt-2"
+              >GitHub Repo</a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- Thesis Section -->
+      <section id="thesis" class="section py-5 bg-light">
+        <div class="container section-title mb-5" data-aos="fade-up">
+          <h2 class="fw-bold">Master's Thesis</h2>
+          <p class="lead text-muted">
+            Spatial Generalization of Crop Yield Prediction using UAV Imagery and Machine Learning
+          </p>
+        </div>
+      
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="card shadow-sm border-0 p-4 text-start">
+            <h4 class="fw-bold mb-3 text-primary">
+              Spatial Generalization of Crop Yield Prediction using UAV Imagery and Machine Learning
+            </h4>
+            <p>
+              My thesis focuses on assesement of machine learning models ability to generalize in spatially heterogeneous agricultural environments. 
+              Many studies have demonstrated promising results for crop yield prediction, but didn't give much attention to spatial variability factor. 
+              This research evaluates the performance of Linear Regression (LR) and Random Forest (RF) models using UAV-based multispectral imagery, 
+              focusing on both intra-field and inter-field generalization scenarios.
+            </p>
+      
+            <h6 class="text-success"> Key Contributions</h6>
+            <ul class="mt-2">
+              <li> Developed UAV-based crop yield prediction models using multispectral imagery and vegetation indices.</li>
+              <li> Designed and implemented spatial cross-validation strategies to rigorously assess model robustness.</li>
+              <li> Performed advanced spatial data cleaning, preprocessing, and analysis pipelines.</li>
+              <li> Conducted multi-field and intra-field evaluations across diverse agricultural environments.</li>
+              <li> Benchmarked model performance using RMSE, R², and Pearson correlation.</li>
+              <li> Applied methodology to farms across Manitoba and Alberta, Canada.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       <!-- Education Section -->
       <section id="education" class="education section py-5">
         <!-- Section Title -->
@@ -438,7 +593,7 @@
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item bg-transparent ps-0">
-                      <i class="bi bi-newspaper"></i>
+                      <i class="bi bi-newspaper me-2"></i>
                       <strong>Master Thesis:</strong> Spatial Generalization of crop yield prediction using UAV Imagery and machine learning
                     </li>
                     <li class="list-group-item bg-transparent ps-0">
@@ -625,119 +780,6 @@
       </section>
       <!-- End Professional Experience Section -->
 
-      <!-- Projects Section -->
-      <section id="projects" class="projects section py-5">
-        <div class="container section-title mb-5" data-aos="fade-up">
-          <h2 class="fw-bold">Projects</h2>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <!-- Project 1 -->
-          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
-            <h4 class="fw-bold text-primary"> Yield Data Processing</h4>
-            <p>
-              This project forms a foundational part of my thesis, focusing on
-              the cleaning and preprocessing of raw yield monitor data collected
-              from four farms across Canada. Unlike standard data cleaning
-              tasks, yield data requires specialized treatment due to its
-              spatial nature and unique noise characteristics. The workflow
-              involved identifying and removing outliers, correcting for
-              harvester lag, filtering based on speed thresholds, and handling
-              overlap zones. Our approach was heavily inspired by two key
-              studies:
-            </p>
-            <ul>
-              <li>
-                Lyle et al.(2013), which outlines robust post-processing
-                techniques for eliminating erroneous yield measurements in grain
-                crops.
-              </li>
-              <li>
-                Blackmore (1999), which presents remedial correction methods for
-                improving the reliability of yield maps.
-              </li>
-            </ul>
-            <p>
-              These references provided a methodological basis for building a
-              tailored pipeline suitable for spatially irregular and highly
-              variable yield data.
-            </p>
-            <h6 class="text-success">Tools Used</h6>
-            <ul class="list-unstyled">
-              <li>Python, GeoPandas, QGIS, Shapely</li>
-            </ul>
-            <a
-              href="https://github.com/Wsank045/Yield-Data-Processing"
-              target="_blank"
-              class="btn btn-outline-primary mt-2"
-              >GitHub Repo</a
-            >
-          </div>
-
-          <!-- Project 2 -->
-          <div class="card mb-5 shadow-sm border-0 p-4 text-start">
-            <h4 class="fw-bold text-primary">
-              Faithful Reasoning via DeepSeek
-            </h4>
-            <p>
-              This project investigates how to improve the faithfulness and
-              logical consistency of reasoning in small language models through
-              Chain-of-Thought (CoT) fine-tuning and synthetic data
-              distillation. We propose a novel framework that transfers
-              high-quality reasoning capabilities from the larger DeepSeek-R1
-              model to a compact LLaMA-3B-Instruct model using LoRA-based
-              fine-tuning and reinforcement learning (GRPO/Unsloth). By
-              combining distillation and reward-based optimization, our method
-              enhances the ability of smaller models to reason step-by-step
-              while preserving factual accuracy.
-            </p>
-            <h6 class="text-success">🛠️ Tools Used</h6>
-            <ul class="list-unstyled">
-              <li> DeepSeek-R1, LoRA-tuned LLaMA-3B, Unsloth</li>
-              <li> Reinforcement learning, custom faithfulness metrics, NLP, LLMs</li>
-            </ul>
-            <a
-              href="https://github.com/Wsank045/knowledge-distillation-GRPO"
-              target="_blank"
-              class="btn btn-outline-primary mt-2"
-              >GitHub Repo</a
-            >
-          </div>
-        </div>
-      </section>
-      <!-- Thesis Section -->
-      <section id="thesis" class="section py-5 bg-light">
-        <div class="container section-title mb-5" data-aos="fade-up">
-          <h2 class="fw-bold">Master's Thesis</h2>
-          <p class="lead text-muted">
-            Spatial Generalization of Crop Yield Prediction using UAV Imagery and Machine Learning
-          </p>
-        </div>
-      
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="card shadow-sm border-0 p-4 text-start">
-            <h4 class="fw-bold mb-3 text-primary">
-              Spatial Generalization of Crop Yield Prediction using UAV Imagery and Machine Learning
-            </h4>
-            <p>
-              My thesis focuses on assesement of machine learning models ability to generalize in spatially heterogeneous agricultural environments. 
-              Many studies have demonstrated promising results for crop yield prediction, but didn't give much attention to spatial variability factor. 
-              This research evaluates the performance of Linear Regression (LR) and Random Forest (RF) models using UAV-based multispectral imagery, 
-              focusing on both intra-field and inter-field generalization scenarios.
-            </p>
-      
-            <h6 class="text-success"> Key Contributions</h6>
-            <ul class="list-unstyled">
-              <li> Developed UAV-based crop yield prediction models using multispectral imagery and vegetation indices.</li>
-              <li> Designed and implemented spatial cross-validation strategies to rigorously assess model robustness.</li>
-              <li> Performed advanced spatial data cleaning, preprocessing, and analysis pipelines.</li>
-              <li> Conducted multi-field and intra-field evaluations across diverse agricultural environments.</li>
-              <li> Benchmarked model performance using RMSE, R², and Pearson correlation.</li>
-              <li> Applied methodology to farms across Manitoba and Alberta, Canada.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
 
     </main>
 
